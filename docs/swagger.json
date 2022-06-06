@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a web application that with the help of gin library and swagger document can verify the national number of people and also return the information of that person in response.",
+        "title": "Project Golang Maktabkhoneh API",
+        "contact": {
+            "name": "API Support (My GitHub)",
+            "url": "https://github.com/saber-khakbiz",
+            "email": "saberkhakbiz73@g"
+        },
+        "version": "1.0"
+    },
+    "host": "127.0.0.1:8080",
+    "paths": {
+        "/nids/{id}": {
+            "get": {
+                "description": "Get City Information by National Identification",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "text/html"
+                ],
+                "tags": [
+                    "ID"
+                ],
+                "summary": "Get City name  Information by nID",
+                "operationId": "get-city-by-id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "National ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}

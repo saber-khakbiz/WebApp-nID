@@ -1,0 +1,31 @@
+host: 127.0.0.1:8080
+info:
+  contact:
+    email: saberkhakbiz73@g
+    name: API Support (My GitHub)
+    url: https://github.com/saber-khakbiz
+  description: This is a web application that with the help of gin library and swagger
+    document can verify the national number of people and also return the information
+    of that person in response.
+  title: Project Golang Maktabkhoneh API
+  version: "1.0"
+paths:
+  /nids/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get City Information by National Identification
+      operationId: get-city-by-id
+      parameters:
+      - description: National ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses: {}
+      summary: Get City name  Information by nID
+      tags:
+      - ID
+swagger: "2.0"
